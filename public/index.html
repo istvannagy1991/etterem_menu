@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Étterem</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="src/login.js" defer></script>
+</head>
+<body class="bg-dark text-white">
+
+  <!-- Bejelentkezés gomb jobb felső sarokban -->
+  <div class="position-absolute top-0 end-0 m-3">
+    <button class="btn btn-primary" id="loginBtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+      Bejelentkezés
+    </button>
+  </div>
+
+  <!-- Fejléc -->
+  <header class="text-center my-5">
+    <h1 class="display-3 fw-bold text-shadow">Étterem</h1>
+  </header>
+
+  <!-- Fő tartalom: Kártya a közepén -->
+  <main class="d-flex justify-content-center align-items-center" style="min-height: 50vh;">
+    <div class="card bg-dark border-light text-center shadow-lg p-4" style="width: 300px;">
+      <div class="card-body">
+        <h5 class="card-title mb-3">🍴 Napi ajánlat</h5>
+        <a href="etlap.html" class="btn btn-success btn-lg">Megnyitás</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal: Bejelentkezés -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Bejelentkezés</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Bezárás"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="username" class="form-label">Felhasználónév</label>
+              <input type="text" class="form-control" id="username" required autocomplete="username">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Jelszó</label>
+              <input type="password" class="form-control" id="password" required autocomplete="current-password">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+          <button type="button" class="btn btn-success" id="loginSubmit" data-bs-dismiss="modal">Bejelentkezés</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
