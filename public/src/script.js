@@ -208,9 +208,9 @@ document.addEventListener("DOMContentLoaded", () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-        username: localStorage.getItem("username"),
-        password: localStorage.getItem("password"),
-        etelek
+          username: localStorage.getItem("username"),
+          password: localStorage.getItem("password"),
+          etelek: etelek   // csak itt tároljuk az étellistát
       })
       });
 

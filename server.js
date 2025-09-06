@@ -31,7 +31,7 @@ app.get("/menu", (req, res) => {
 
 // Menü mentése – csak bejelentkezve
 app.post("/menu", (req, res) => {
-  const { username, password, etelek } = req.body;
+  const etelek  = req.body;
 
   // Egyszerű jogosultság ellenőrzés
   if (
@@ -42,7 +42,7 @@ app.post("/menu", (req, res) => {
   }
 
   // Mentés fájlba
-  const filePath = path.join(__dirname, "public/data/menu.json");
+  const filePath = path.join(__dirname, "public", "data", "menu.json");
   fs.writeFileSync(filePath, JSON.stringify(etelek, null, 2));
   res.json({ success: true });
 });

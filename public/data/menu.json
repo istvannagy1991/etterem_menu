@@ -1,18 +1,10 @@
-{
-  "username": "admin",
-  "password": "1234",
-  "etelek": [
-    {
-      "nev": "Hamburger",
-      "ar": 208
-    },
-    {
-      "nev": "Borscs",
-      "ar": 47
-    },
-    {
-      "nev": "Gyros",
-      "ar": 17
-    }
-  ]
-}
+[
+  {
+    "nev": "Pizza",
+    "ar": 2500
+  },
+  {
+    "nev": "Hamburger",
+    "ar": 1800
+  }
+]
