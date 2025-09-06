@@ -23,7 +23,7 @@ app.post("/login", (req, res) => {
 
 // Menü betöltése
 app.get("/menu", (req, res) => {
-  const filePath = path.join(__dirname, "public/data/menu.json");
+  const filePath = path.join(__dirname, "public", "data", "menu.json");
   if (!fs.existsSync(filePath)) return res.json([]);
   const data = fs.readFileSync(filePath, "utf-8");
   res.json(JSON.parse(data || "[]"));

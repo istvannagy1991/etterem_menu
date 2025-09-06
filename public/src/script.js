@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // -------------------------
   async function loadMenuFromServer() {
     try {
-      const res = await fetch("/menu");
+      const res = await fetch("/data/menu.json");
       if (!res.ok) throw new Error(`HTTP hiba: ${res.status}`);
       etelek = await res.json();
       renderEtelLista();
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // -------------------------
   async function saveMenuToServer() {
     try {
-      const res = await fetch("/menu", {
+      const res = await fetch("/data/menu.json", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
